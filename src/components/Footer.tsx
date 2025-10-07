@@ -137,7 +137,7 @@ const Footer = () => {
 
         <div className="pt-8 border-t border-border/50 text-center text-sm text-muted-foreground">
           <p>© 2025 OpenSource Event. Built with ❤️ by the community.</p>
-          <p className="mt-2">Made with Lovable for developers, by developers.</p>
+          <p className="mt-2">Made for developers, by developers.</p>
         </div>
       </div>
     </footer>
