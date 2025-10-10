@@ -11,7 +11,7 @@ const timelineEvents = [
   {
     icon: CalendarX,
     title: "Registration Deadline",
-    date: "October 22, 2025",
+    date: "October 20, 2025",
     description: "Deadline for registration",
     status: "upcoming"
   },

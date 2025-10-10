@@ -1,5 +1,5 @@
 import { GraduationCap, Users, Briefcase, Network } from "lucide-react";
-import { Card } from "./ui/card";
+import { Card } from "@/components/ui/card";
 
 const benefits = [
   {

@@ -169,7 +169,7 @@ console.log("Response text:", resText);
               <div className="space-y-4">
                 <div>
                   <h4 className="font-semibold mb-2">Email</h4>
-                  <p className="text-muted-foreground">contact@opensourceevent.com</p>
+                  <p className="text-muted-foreground">igdtuwcodebenders@gmail.com</p>
                 </div>
                 <div>
                   <h4 className="font-semibold mb-2">Follow us</h4>

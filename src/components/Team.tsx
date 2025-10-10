@@ -7,7 +7,7 @@ const team = [
   {
     name: "Anshika Arora",
     role: "President",
-    image: "https://media.licdn.com/dms/image/v2/D5603AQEQVGHbOsmDVw/profile-displayphoto-scale_400_400/B56ZmRvK8FKEAg-/0/1759086686520?e=1762992000&v=beta&t=-DaQYFKtN1yCdw62Y63GQDjXw5DmxVdVsSVbnCxrB6o",
+    image: "https://v0-code-benders.vercel.app/anshika-president.png",
     linkedin: "https://www.linkedin.com/in/anshika-arora-91b3361ba/",
   },
 
@@ -15,13 +15,13 @@ const team = [
   {
     name: "Sonam Kumari",
     role: "Vice President",
-    image: "https://media.licdn.com/dms/image/v2/D5603AQEflUfdWuUDpA/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1704467548389?e=1762992000&v=beta&t=WqnwazbkNy-YcCUQz3N1N3J9OBlstA76zcYrHt3FIIA",
+    image: "https://v0-code-benders.vercel.app/sonam-vp.png",
     linkedin: "https://www.linkedin.com/in/sonam-kumari-084641257/",
   },
   {
     name: "Divya Sharma",
     role: "Vice President",
-    image: "👨‍💻",
+    image: "https://v0-code-benders.vercel.app/divya-vp.png",
     linkedin: "https://www.linkedin.com/in/divya-72018a283/",
   },
 
@@ -29,7 +29,7 @@ const team = [
   {
     name: "Akanksha Chanana",
     role: "Tech Lead",
-    image: "https://media.licdn.com/dms/image/v2/C5603AQHuEb3Nva3Z7Q/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1644050927815?e=1762992000&v=beta&t=-LvMHyxZ8aO61wY8Xou-rLBfwHIlk15TgheVob0iQKA",
+    image: "https://v0-code-benders.vercel.app/akanksha-tech-lead.png",
     linkedin: "https://www.linkedin.com/in/akanksha-chanana-490b94215/",
   },
   {
@@ -64,49 +64,51 @@ const Team = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {team.map((member, index) => (
-            <Card
-              key={member.name}
-              className="group overflow-hidden bg-card/50 backdrop-blur-sm border-border/50 hover:border-primary/50 hover:shadow-2xl hover:shadow-primary/20 transition-all duration-500 hover:-translate-y-2 animate-fade-in"
-              style={{ animationDelay: `${index * 0.1}s` }}
-            >
-              <div className="relative overflow-hidden bg-gradient-to-br from-primary/20 to-secondary/20 h-48 flex items-center justify-center text-8xl">
-  {member.image && member.image.startsWith("http") ? (
-    <img
-      src={member.image}
-      alt={member.name}
-      className="object-cover w-full h-full"
-    />
-  ) : (
-    <span>{member.image || "👤"}</span>
-  )}
-  <div className="absolute inset-0 bg-gradient-to-t from-card to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-</div>
-              
-              <div className="p-6 text-center space-y-4">
-                <div>
-                  <h3 className="text-2xl font-bold group-hover:text-primary transition-colors">
-                    {member.name}
-                  </h3>
-                  <p className="text-muted-foreground">{member.role}</p>
-                </div>
+<div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+  {team.map((member, index) => (
+    <Card
+      key={member.name}
+      className="group overflow-hidden bg-card/50 backdrop-blur-sm border-border/50 
+                 hover:border-primary/50 hover:shadow-2xl hover:shadow-primary/20 
+                 transition-all duration-500 hover:-translate-y-2 animate-fade-in"
+      style={{ animationDelay: `${index * 0.1}s` }}
+    >
+      <div className="relative overflow-hidden bg-gradient-to-br from-primary/20 to-secondary/20 h-48 flex items-center justify-center">
+        {member.image && member.image.startsWith("http") ? (
+          <img
+            src={member.image}
+            alt={member.name}
+            className="w-full h-full object-contain object-center transition-transform duration-500 group-hover:scale-105"
+          />
+        ) : (
+          <span className="text-8xl">{member.image || "👤"}</span>
+        )}
+        <div className="absolute inset-0 bg-gradient-to-t from-card to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+      </div>
 
-                <div className="flex gap-3 justify-center">
-                  <Button
-                    size="sm"
-                    variant="outline"
-                    className="rounded-full w-10 h-10 p-0"
-                    onClick={() => window.open(member.linkedin, "_blank")}
-                  >
-                    <Linkedin className="h-4 w-4" />
-                  </Button>
-                  
-                </div>
-              </div>
-            </Card>
-          ))}
-        </div>
+      <div className="p-4 text-center">
+        <p className="text-lg font-semibold">{member.name}</p>
+        {member.role && (
+          <p className="text-sm text-muted-foreground mt-1">{member.role}</p>
+        )}
+
+        {member.linkedin && (
+          <a
+            href={member.linkedin}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center justify-center gap-1 text-primary hover:text-primary/80 mt-2 transition-colors"
+          >
+            <Linkedin size={18} />
+            <span className="text-sm font-medium">LinkedIn</span>
+          </a>
+        )}
+      </div>
+    </Card>
+  ))}
+</div>
+
+
       </div>
     </section>
   );

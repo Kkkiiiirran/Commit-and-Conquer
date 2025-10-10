@@ -38,7 +38,7 @@ const Hero = () => {
             <span className="text-3xl md:text-4xl">An Open Source Fest by Codebenders</span>
           </h1>
           
-          <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+          <p className="text-lg text-purple-100 md:text-xl  max-w-2xl mx-auto leading-relaxed">
             Join the ultimate open-source event where developers unite to build, learn, and innovate together. 
             Transform ideas into reality with a global community of creators.
           </p>
@@ -57,7 +57,7 @@ const Hero = () => {
               size="lg" 
               variant="outline"
               className="border-2 border-primary/50 bg-background/10 backdrop-blur-sm hover:bg-primary/20 text-lg px-8 py-6 rounded-2xl"
-              onClick={() => window.open("https://docs.google.com/forms/d/e/1FAIpQLSd9DdaI9EdHCgY8rn4e4r3T3JOPcPcq-ICMLJGme-lvOPW-DA/viewform?usp=dialog", "_blank")}
+              onClick={() => window.open("https://unstop.com/hackathons/commit-and-conquer-igdtuw-delhi-1571144?lb=ATJ34nu&utm_medium=Share&utm_source=anshiaro5901&utm_campaign=Online_coding_challenge", "_blank")}
             >
               <Users className="mr-2 h-5 w-5" />
               Apply as Contributor
@@ -67,7 +67,7 @@ const Hero = () => {
               size="lg" 
               variant="outline"
               className="border-2 border-secondary/50 bg-background/10 backdrop-blur-sm hover:bg-secondary/20 text-lg px-8 py-6 rounded-2xl"
-              onClick={() => window.open("https://docs.google.com/forms/d/e/1FAIpQLSdvH6hg_9jNWsIRwqjvgJWOXQoe3NmJjF7ygg8ZTS4CZ2ZMSw/viewform?usp=header", "_blank")}
+              onClick={() => window.open("https://unstop.com/hackathons/commit-and-conquer-igdtuw-delhi-1571144?lb=ATJ34nu&utm_medium=Share&utm_source=anshiaro5901&utm_campaign=Online_coding_challenge", "_blank")}
             >
               <Github className="mr-2 h-5 w-5" />
               Apply as Project Admin
