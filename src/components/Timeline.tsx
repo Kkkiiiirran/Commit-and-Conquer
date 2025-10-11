@@ -6,6 +6,7 @@ import {
   Rocket,
   Hourglass,
 } from "lucide-react";
+import { useEffect, useState } from "react";
 
 const timelineEvents = [
   {
@@ -15,7 +16,7 @@ const timelineEvents = [
     description:
       "Registration portal opens for contributors and project admins",
     status: "current",
-    link: "https://unstop.com/hackathons/commit-and-conquer-igdtuw-delhi-1571144?lb=ATJ34nu&utm_medium=Share&utm_source=anshiaro5901&utm_campaign=Online_coding_challenge", // 👈 Add your link here
+    link: "https://unstop.com/hackathons/commit-and-conquer-igdtuw-delhi-1571144?lb=ATJ34nu&utm_medium=Share&utm_source=anshiaro5901&utm_campaign=Online_coding_challenge",
   },
   {
     icon: CalendarX,
@@ -48,6 +49,31 @@ const timelineEvents = [
 ];
 
 const Timeline = () => {
+  // ===== Inline Countdown Logic =====
+  const [timeLeft, setTimeLeft] = useState(getTimeRemaining());
+
+  function getTimeRemaining() {
+    const targetDate = new Date("2025-10-22T23:59:59").getTime();
+    const now = new Date().getTime();
+    const diff = targetDate - now;
+
+    if (diff <= 0)
+      return { days: 0, hours: 0, minutes: 0, seconds: 0, expired: true };
+
+    return {
+      days: Math.floor(diff / (1000 * 60 * 60 * 24)),
+      hours: Math.floor((diff / (1000 * 60 * 60)) % 24),
+      minutes: Math.floor((diff / (1000 * 60)) % 60),
+      seconds: Math.floor((diff / 1000) % 60),
+      expired: false,
+    };
+  }
+
+  useEffect(() => {
+    const timer = setInterval(() => setTimeLeft(getTimeRemaining()), 1000);
+    return () => clearInterval(timer);
+  }, []);
+
   return (
     <section className="py-24 px-6 bg-card/30">
       <div className="container mx-auto max-w-5xl">
@@ -122,7 +148,6 @@ const Timeline = () => {
                       {event.description}
                     </p>
 
-                    {/* 👇 Register Button (only for Registration Open) */}
                     {event.link && (
                       <a
                         href={event.link}
@@ -142,9 +167,38 @@ const Timeline = () => {
             ))}
           </div>
         </div>
+
+        {/* ===== Countdown Timer Below Timeline ===== */}
+        <div className="mt-16 flex flex-col items-center justify-center p-8 bg-black text-white rounded-2xl shadow-lg border border-gray-800">
+          {timeLeft.expired ? (
+            <h2 className="text-2xl font-bold text-red-500">
+              Registration Closed
+            </h2>
+          ) : (
+            <>
+              <h2 className="text-xl font-semibold mb-4 text-gray-200">
+                Registration closes in
+              </h2>
+              <div className="flex gap-4 text-center">
+                {["days", "hours", "minutes", "seconds"].map((unit) => (
+                  <div
+                    key={unit}
+                    className="flex flex-col items-center bg-gray-900 px-4 py-2 rounded-lg shadow-md"
+                  >
+                    <span className="text-4xl font-bold text-purple-500">
+                      {timeLeft[unit as keyof typeof timeLeft]}
+                    </span>
+                    <span className="text-sm text-gray-400 uppercase">{unit}</span>
+                  </div>
+                ))}
+              </div>
+            </>
+          )}
+        </div>
       </div>
     </section>
   );
 };
 
 export default Timeline;
+
