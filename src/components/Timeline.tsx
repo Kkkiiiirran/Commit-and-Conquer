@@ -12,7 +12,7 @@ const timelineEvents = [
   {
     icon: Calendar,
     title: "Registration Open",
-    date: "October 8, 2025",
+    date: "October 9, 2025",
     description:
       "Registration portal opens for contributors and project admins",
     status: "current",
@@ -42,8 +42,8 @@ const timelineEvents = [
   {
     icon: Trophy,
     title: "Results Announced",
-    date: "to be announced",
-    description: "Winners announced and certificates distributed",
+    date: "November 17-18, 2025",
+    description: "Winners will be announced and certificates, along with goodies and prizes, will be distributed at IGDTUW, Delhi.",
     status: "upcoming",
   },
 ];
