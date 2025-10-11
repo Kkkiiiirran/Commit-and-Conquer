@@ -1,41 +1,50 @@
-import { Calendar, CheckCircle2, Trophy, CalendarX,Rocket,Hourglass, } from "lucide-react";
+import {
+  Calendar,
+  CheckCircle2,
+  Trophy,
+  CalendarX,
+  Rocket,
+  Hourglass,
+} from "lucide-react";
 
 const timelineEvents = [
   {
     icon: Calendar,
     title: "Registration Open",
     date: "October 8, 2025",
-    description: "Registration portal opens for contributors and project admins",
-    status: "current"
+    description:
+      "Registration portal opens for contributors and project admins",
+    status: "current",
+    link: "https://unstop.com/hackathons/commit-and-conquer-igdtuw-delhi-1571144?lb=ATJ34nu&utm_medium=Share&utm_source=anshiaro5901&utm_campaign=Online_coding_challenge", // 👈 Add your link here
   },
   {
     icon: CalendarX,
     title: "Registration Deadline",
-    date: "October 20, 2025",
+    date: "October 22, 2025",
     description: "Deadline for registration",
-    status: "upcoming"
+    status: "upcoming",
   },
   {
     icon: Rocket,
     title: "Contribution Period Starts",
-    date: "October 22, 2025",
+    date: "October 20, 2025",
     description: "Students can start contribution",
-    status: "upcoming"
+    status: "upcoming",
   },
   {
     icon: Hourglass,
     title: "Contribution Period Ends",
-    date: "November 4,2025",
+    date: "November 4, 2025",
     description: "Students need to finalise all PR's",
-    status: "upcoming"
+    status: "upcoming",
   },
   {
     icon: Trophy,
     title: "Results Announced",
     date: "to be announced",
     description: "Winners announced and certificates distributed",
-    status: "upcoming"
-  }
+    status: "upcoming",
+  },
 ];
 
 const Timeline = () => {
@@ -69,20 +78,32 @@ const Timeline = () => {
               >
                 {/* Timeline dot */}
                 <div className="absolute left-8 md:left-1/2 -translate-x-1/2 z-10">
-                  <div className={`w-16 h-16 rounded-2xl flex items-center justify-center ${
-                    event.status === "completed" ? "bg-primary" :
-                    event.status === "current" ? "bg-secondary animate-pulse" :
-                    "bg-muted"
-                  }`}>
+                  <div
+                    className={`w-16 h-16 rounded-2xl flex items-center justify-center ${
+                      event.status === "completed"
+                        ? "bg-primary"
+                        : event.status === "current"
+                        ? "bg-secondary animate-pulse"
+                        : "bg-muted"
+                    }`}
+                  >
                     <event.icon className="h-8 w-8 text-white" />
                   </div>
                 </div>
 
                 {/* Content card */}
-                <div className={`flex-1 ml-28 md:ml-0 ${index % 2 === 0 ? "md:pr-16" : "md:pl-16"}`}>
-                  <div className={`bg-card/50 backdrop-blur-sm border ${
-                    event.status === "current" ? "border-secondary/50 shadow-xl shadow-secondary/20" : "border-border/50"
-                  } rounded-2xl p-6 hover:shadow-2xl hover:shadow-primary/20 transition-all duration-300 hover:-translate-y-1`}>
+                <div
+                  className={`flex-1 ml-28 md:ml-0 ${
+                    index % 2 === 0 ? "md:pr-16" : "md:pl-16"
+                  }`}
+                >
+                  <div
+                    className={`bg-card/50 backdrop-blur-sm border ${
+                      event.status === "current"
+                        ? "border-secondary/50 shadow-xl shadow-secondary/20"
+                        : "border-border/50"
+                    } rounded-2xl p-6 hover:shadow-2xl hover:shadow-primary/20 transition-all duration-300 hover:-translate-y-1`}
+                  >
                     <div className="flex items-center gap-3 mb-3">
                       <h3 className="text-2xl font-bold">{event.title}</h3>
                       {event.status === "completed" && (
@@ -94,8 +115,24 @@ const Timeline = () => {
                         </span>
                       )}
                     </div>
-                    <p className="text-sm text-primary font-semibold mb-2">{event.date}</p>
-                    <p className="text-muted-foreground">{event.description}</p>
+                    <p className="text-sm text-primary font-semibold mb-2">
+                      {event.date}
+                    </p>
+                    <p className="text-muted-foreground mb-4">
+                      {event.description}
+                    </p>
+
+                    {/* 👇 Register Button (only for Registration Open) */}
+                    {event.link && (
+                      <a
+                        href={event.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-block px-5 py-2 bg-gradient-to-r from-primary to-secondary text-white font-semibold rounded-full shadow-md hover:shadow-lg hover:scale-105 transition-transform duration-300"
+                      >
+                        Register Here →
+                      </a>
+                    )}
                   </div>
                 </div>
 
