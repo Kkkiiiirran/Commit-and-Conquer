@@ -6,7 +6,7 @@ import {
   Rocket,
   Hourglass,
 } from "lucide-react";
-import { useEffect, useState } from "react";
+
 
 const timelineEvents = [
   {
@@ -21,7 +21,7 @@ const timelineEvents = [
   {
     icon: CalendarX,
     title: "Registration Deadline",
-    date: "October 22, 2025",
+    date: "October 23, 2025",
     description: "Deadline for registration",
     status: "upcoming",
   },
@@ -48,31 +48,8 @@ const timelineEvents = [
   },
 ];
 
-const Timeline = () => {
+const Timeline = ({ timeLeft }) => {
   // ===== Inline Countdown Logic =====
-  const [timeLeft, setTimeLeft] = useState(getTimeRemaining());
-
-  function getTimeRemaining() {
-    const targetDate = new Date("2025-10-22T23:59:59").getTime();
-    const now = new Date().getTime();
-    const diff = targetDate - now;
-
-    if (diff <= 0)
-      return { days: 0, hours: 0, minutes: 0, seconds: 0, expired: true };
-
-    return {
-      days: Math.floor(diff / (1000 * 60 * 60 * 24)),
-      hours: Math.floor((diff / (1000 * 60 * 60)) % 24),
-      minutes: Math.floor((diff / (1000 * 60)) % 60),
-      seconds: Math.floor((diff / 1000) % 60),
-      expired: false,
-    };
-  }
-
-  useEffect(() => {
-    const timer = setInterval(() => setTimeLeft(getTimeRemaining()), 1000);
-    return () => clearInterval(timer);
-  }, []);
 
   return (
     <section className="py-24 px-6 bg-card/30">
