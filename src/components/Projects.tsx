@@ -8,59 +8,79 @@ import { ExternalLink, Github, Search } from "lucide-react";
 const projects = [
   {
     id: 1,
-    name: "AI Content Generator",
-    description: "Create stunning content using advanced AI models with an intuitive interface",
-    tags: ["Machine Learning", "Python", "React"],
-    github: "https://github.com",
-    demo: "https://example.com",
-    image: "🤖"
+    name: "Addiction Risk Assessment",
+    description: "The goal of this project is to predict the likelihood of addiction (Yes/No) based on user-specific inputs including:
+
+Substance usage (Alcohol, Cannabis, Tobacco, etc.)
+Age of first use and current age
+Frequency of usage
+Reported stress levels and diagnosed mental health conditions
+Coping mechanisms and presence of support systems
+Through this, we aim to:
+
+Understand patterns of substance exposure, especially in adolescence or pre-teen years
+Explore behavioral risk factors contributing to addiction
+Enable predictive modeling to assist mental health professionals",
+    tags: ["Machine Learning", "Python", "Data Science"],
+    github: "https://github.com/simrann0104/Addiction-Risk-Prediction-Using-Python/tree/main",
+    demo: null,
+    image: "📊"
   },
   {
     id: 2,
-    name: "Real-time Chat App",
-    description: "Full-stack messaging platform with end-to-end encryption and media sharing",
-    tags: ["Web Dev", "Node.js", "Socket.io"],
-    github: "https://github.com",
-    demo: "https://example.com",
+    name: "Chat-app-project",
+    description: "Enhance the conversation in a chat with any different language in any different country anywhere any relation",
+    tags: ["JavaScript", "Node.js", "Socket.io"],
+    github: "https://github.com/ayayayayayayayaay/chat-app-project",
+    demo: null,
     image: "💬"
   },
   {
     id: 3,
     name: "MLDL.Study",
     description: "MLDL.Study is a free and interactive learning platform designed to simplify Machine Learning (ML) and Deep Learning (DL) education for students and enthusiasts. Currently focused on Indian audiences, the platform features curated roadmaps, videos, articles, and other learning materials.",
-    tags: ["App Dev", "React Native", "Firebase"],
+    tags: ["JavaScript", "React", "Vite"],
     github: "https://github.com/anshaneja5/mldl.study",
     demo: "https://www.mldl.study/",
-    image: "💪"
+    image: "📚"
   },
   {
     id: 4,
-    name: "Code Snippet Manager",
-    description: "Organize and share your code snippets with syntax highlighting and tags",
-    tags: ["Web Dev", "TypeScript", "MongoDB"],
-    github: "https://github.com",
-    demo: "https://example.com",
-    image: "📝"
-  },
-  {
-    id: 5,
     name: "Markit Chrome Extension",
     description: "Markit is a simple yet powerful Chrome extension that lets you highlight and save text directly from any webpage.
 Whether you’re reading an article, doing research, or collecting quotes — Markit keeps your important lines just one click away.",
-    tags: ["IoT", "Python", "React"],
+    tags: ["JavaScript", "HTML/CSS", "Chrome Extension"],
     github: "https://github.com/Deepak-Kambala/MarkIt-extension",
     demo: null,
-    image: "🏠"
+    image: "🧩"
+  },
+  {
+    id: 5,
+    name: "NeoNest",
+    description: "NeoNest is a smart parenting website designed for parents of newborns (0-12 months), specially for first-time parents. The project envisions to help parents navigate their child's journey in these crucial months while taking care of their own by making things simple and smooth. The website provides various features including trackers, inventory suggestions, tasks automation, curated resources for parents and a notification system to keep them alert and informed.",
+    tags: ["JavaScript", "Next.js", "MongoDB"],
+    github: "https://github.com/AditiGupta-tech/neonest",
+    demo: "https://neonest-babycare.vercel.app/",
+    image: "👶"
   },
   {
     id: 6,
-    name: "NeoNest",
-    description: "NeoNest is a smart parenting website designed for parents of newborns (0-12 months), specially for first-time parents. The project envisions to help parents navigate their child's journey in these crucial months while taking care of their own by making things simple and smooth. The website provides various features including trackers, inventory suggestions, tasks automation, curated resources for parents and a notification system to keep them alert and informed.",
-    tags: ["Web Dev", "Next.js", "Tailwind"],
-    github: "https://github.com/AditiGupta-tech/neonest",
-    demo: "https://example.com",
-    image: "🎨"
+    name: "DocMagic",
+    description: "The project which helps you creating any type of documents and also creating website and also logo and figma design with ai ",
+    tags: ["Next.js", "TypeScript", "Supabase"],
+    github: "https://www.github.com/Muneerali199/DocMagic",
+    demo: "Docmagic-orcin.vercel.app",
+    image: "📝"
   },
+  {
+    id: 7,
+    name: "Pest Detection in Peanut Farming",
+    description: "A machine learning and image processing solution that automatically detects and identifies pests in peanut crops. By analyzing plant images, it recognizes various pest species, enabling early and accurate pest control, improving crop health, reducing pesticide use, and increasing yields.",
+    tags: ["React", "TypeScript", "Supabase"],
+    github: "https://github.com/Bhuvaneshwari244/pest-detection.git",
+    demo: "pest-detection-sczg-3eym9ofcd-bhuvaneshwari244s-projects.vercel.app",
+    image: "🌱"
+  }, 
 ];
 
 const allTags = Array.from(new Set(projects.flatMap(p => p.tags)));
