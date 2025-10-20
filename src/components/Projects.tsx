@@ -1,76 +1,145 @@
+
 import { useState } from "react";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Badge } from "@/components/ui/badge";
-import { ExternalLink, Github, Search, ArrowLeft } from "lucide-react";
+import { Search } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 const projects = [
   {
     id: 1,
-    name: "AI Content Generator",
-    description: "An intelligent content generation tool powered by machine learning algorithms that helps users create high-quality content effortlessly.",
-    tags: ["Machine Learning", "Python", "React"],
-    image: "🤖",
-    github: "https://github.com"
+    name: "Addiction Risk Assessment",
+    description: [
+      "Assesses an individual's likelihood of addiction using behavioral and psychological parameters.",
+      "Analyzes features such as substance usage patterns, age of first exposure, stress indicators, and coping mechanisms.",
+      "Classifies users into 'At Risk' or 'Low Risk' categories for early intervention.",
+      "Empowers healthcare and mental wellness professionals to design personalized, proactive interventions.",
+      "Supports data-driven decision making for preventive care."
+    ],
+    tags: ["Machine Learning", "Python", "Data Analysis"],
+    image: "🧠",
+    github: "https://github.com/simrann0104/Addiction-Risk-Prediction-Using-Python/tree/main",
   },
   {
     id: 2,
-    name: "Real-time Chat App",
-    description: "A real-time messaging application with instant notifications, user authentication, and group chat capabilities.",
-    tags: ["Web Dev", "Node.js", "Socket.io"],
+    name: "Chat App Project",
+    description: [
+      "Real-time multilingual chat platform for seamless global communication.",
+      "Supports instant messaging with live translation across different languages.",
+      "Features custom chat rooms, user authentication, and message delivery status.",
+      "Built using Node.js, Express, and Socket.io for live updates.",
+      "Ideal for personal and professional use across diverse communities."
+    ],
+    tags: ["Web Dev", "Node.js", "Socket.io", "Express"],
     image: "💬",
-    github: "https://github.com"
+    github: "https://github.com/ayayayayayayayaay/chat-app-project",
   },
   {
     id: 3,
-    name: "Fitness Tracker",
-    description: "A mobile fitness tracking application that monitors workouts, calories, and provides personalized health recommendations.",
-    tags: ["App Dev", "React Native", "Firebase"],
-    image: "💪",
-    github: "https://github.com"
+    name: "MLDL.Study",
+    description: [
+      "Interactive, open-access e-learning platform for Machine Learning and Deep Learning.",
+      "Provides structured roadmaps, curated tutorials, research papers, and conceptual explainers.",
+      "Tailored for students and enthusiasts in India, bridging the gap between theory and practice.",
+      "Helps learners navigate AI effectively with hands-on projects.",
+      "Supports both beginners and advanced learners in understanding ML/DL concepts."
+    ],
+    tags: ["Web Dev", "React", "Machine Learning", "Education"],
+    image: "📚",
+    github: "https://github.com/anshaneja5/mldl.study",
   },
   {
     id: 4,
-    name: "Code Snippet Manager",
-    description: "An organized code snippet storage and search tool for developers to manage and reuse code efficiently.",
-    tags: ["Web Dev", "TypeScript", "MongoDB"],
-    image: "📝",
-    github: "https://github.com"
+    name: "Front-End Website",
+    description: [
+      "Modern and responsive front-end website focused on usability and accessibility.",
+      "Built using semantic HTML, modular CSS, and interactive JavaScript components.",
+      "Demonstrates best practices in layout design, responsiveness, and performance.",
+      "Adaptable for portfolio, business, or product websites.",
+      "Clean and visually appealing interface for a professional user experience."
+    ],
+    tags: ["Frontend", "HTML", "CSS", "JavaScript"],
+    image: "🌐",
+    github: "https://github.com/ayayayayayayayaay/Front-end-website",
   },
   {
     id: 5,
-    name: "Smart Home Dashboard",
-    description: "A comprehensive dashboard for controlling and monitoring smart home devices with real-time data visualization.",
-    tags: ["IoT", "Python", "React"],
-    image: "🏠",
-    github: "https://github.com"
+    name: "NeoNest",
+    description: [
+      "Smart parenting platform for parents of newborns (0–12 months).",
+      "Features growth trackers, feeding and sleep schedulers, and AI-powered suggestions.",
+      "Curates relevant parenting content to guide early developmental milestones.",
+      "Built with Next.js, React, and Tailwind for a responsive, intuitive interface.",
+      "Combines practicality with emotional support for new parents."
+    ],
+    tags: ["Web Dev", "Next.js", "React", "Tailwind"],
+    image: "👶",
+    github: "https://github.com/AditiGupta-tech/neonest",
   },
   {
     id: 6,
-    name: "Portfolio Generator",
-    description: "An automated portfolio generator that creates beautiful, responsive portfolio websites from user data.",
-    tags: ["Web Dev", "Next.js", "Tailwind"],
-    image: "🎨",
-    github: "https://github.com"
+    name: "Markit Chrome Extension",
+    description: [
+      "Chrome extension that allows highlighting, saving, and organizing text from webpages.",
+      "Transforms browsing into an interactive research experience.",
+      "Users can revisit, categorize, and search saved highlights efficiently.",
+      "Designed for students, researchers, and professionals.",
+      "Helps turn passive reading into a personalized knowledge management workflow."
+    ],
+    tags: ["Browser Extension", "JavaScript", "Chrome APIs", "HTML/CSS"],
+    image: "🖍️",
+    github: "https://github.com/Deepak-Kambala/MarkIt-extension",
   },
+  {
+    id: 7,
+    name: "DocMagic",
+    description: [
+      "AI-powered productivity suite for creating documents, website layouts, logos, and Figma prototypes.",
+      "Uses NLP and generative AI models to automate content creation workflows.",
+      "Reduces manual effort in design and documentation tasks.",
+      "Accessible for non-technical users, enhancing productivity.",
+      "Streamlines creation of professional-grade content efficiently."
+    ],
+    tags: ["AI", "Web Dev", "React", "Figma"],
+    image: "🪄",
+    github: "https://www.github.com/Muneerali199/DocMagic",
+  },
+  {
+    id: 8,
+    name: "Pest Detection in Peanut Farming",
+    description: [
+      "AI-powered system for detecting and classifying pests in peanut crops.",
+      "Uses image processing and machine learning for early infestation detection.",
+      "Reduces pesticide use by identifying issues proactively.",
+      "Improves crop yield and supports sustainable farming practices.",
+      "Combines precision agriculture with eco-friendly approaches."
+    ],
+    tags: ["Machine Learning", "Image Processing", "Agritech", "Python"],
+    image: "🌾",
+    github: "https://github.com/Bhuvaneshwari244/pest-detection.git",
+  }
 ];
+
 
 const allTags = Array.from(new Set(projects.flatMap(p => p.tags)));
 
-const ProjectCard = ({ project, onViewClick }) => {
+const ProjectCard = ({ project }) => {
+  const navigate = useNavigate();
+
   return (
     <Card className="group overflow-hidden bg-card/50 backdrop-blur-sm border-border/50 hover:border-primary/50 hover:shadow-2xl hover:shadow-primary/20 transition-all duration-500 hover:-translate-y-2 h-full flex flex-col">
       <div className="relative overflow-hidden bg-gradient-to-br from-primary/20 to-secondary/20 h-48 flex items-center justify-center text-8xl">
         {project.image}
         <div className="absolute inset-0 bg-gradient-to-t from-card to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
       </div>
-      
+
       <div className="p-6 space-y-4 flex-1 flex flex-col">
         <h3 className="text-xl font-bold group-hover:text-primary transition-colors">
           {project.name}
         </h3>
-        
+
         <div className="flex flex-wrap gap-2">
           {project.tags.map(tag => (
             <Badge key={tag} variant="secondary" className="rounded-full text-xs">
@@ -81,9 +150,8 @@ const ProjectCard = ({ project, onViewClick }) => {
 
         <Button
           className="w-full rounded-xl mt-auto"
-          onClick={() => onViewClick(project)}
+          onClick={() => navigate(`/project/${project.id}`)}
         >
-          <ExternalLink className="h-4 w-4 mr-2" />
           View Project
         </Button>
       </div>
@@ -91,100 +159,22 @@ const ProjectCard = ({ project, onViewClick }) => {
   );
 };
 
-const ProjectDetailView = ({ project, onBack }) => {
-  return (
-    <section className="py-24 px-6 bg-background min-h-screen">
-      <div className="container mx-auto max-w-4xl">
-        <Button
-          variant="outline"
-          className="mb-8 rounded-full"
-          onClick={onBack}
-        >
-          <ArrowLeft className="h-4 w-4 mr-2" />
-          Back to Projects
-        </Button>
-
-        <div className="space-y-8">
-          {/* Header */}
-          <div className="space-y-6">
-            <div className="flex items-start gap-6">
-              <div className="text-9xl">{project.image}</div>
-              <div className="flex-1 space-y-4">
-                <h1 className="text-5xl font-bold">
-                  {project.name}
-                </h1>
-                <div className="flex flex-wrap gap-2">
-                  {project.tags.map(tag => (
-                    <Badge key={tag} variant="default" className="rounded-full text-sm">
-                      {tag}
-                    </Badge>
-                  ))}
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* Description Card */}
-          <Card className="bg-card/50 backdrop-blur-sm border-border/50 p-8">
-            <h2 className="text-2xl font-bold mb-4">About</h2>
-            <p className="text-lg text-muted-foreground leading-relaxed">
-              {project.description}
-            </p>
-          </Card>
-
-          {/* Tech Stack Card */}
-          <Card className="bg-card/50 backdrop-blur-sm border-border/50 p-8">
-            <h2 className="text-2xl font-bold mb-4">Tech Stack</h2>
-            <div className="flex flex-wrap gap-3">
-              {project.tags.map(tag => (
-                <Badge key={tag} variant="secondary" className="rounded-full text-base py-2 px-4">
-                  {tag}
-                </Badge>
-              ))}
-            </div>
-          </Card>
-
-          {/* Links Card */}
-          <Card className="bg-card/50 backdrop-blur-sm border-border/50 p-8">
-            <h2 className="text-2xl font-bold mb-6">Links</h2>
-            <div className="flex gap-4 flex-wrap">
-              <Button
-                size="lg"
-                className="rounded-xl flex-1 min-w-[200px]"
-                onClick={() => window.open(project.github, "_blank")}
-              >
-                <Github className="h-5 w-5 mr-2" />
-                View on GitHub
-              </Button>
-            </div>
-          </Card>
-        </div>
-      </div>
-    </section>
-  );
-};
-
 const Projects = () => {
   const [selectedTag, setSelectedTag] = useState(null);
   const [searchQuery, setSearchQuery] = useState("");
-  const [selectedProject, setSelectedProject] = useState(null);
 
   const filteredProjects = projects.filter(project => {
     const matchesTag = !selectedTag || project.tags.includes(selectedTag);
-    const matchesSearch = !searchQuery || 
+    const matchesSearch = !searchQuery ||
       project.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
       project.description.toLowerCase().includes(searchQuery.toLowerCase());
     return matchesTag && matchesSearch;
   });
 
-  if (selectedProject) {
-    return <ProjectDetailView project={selectedProject} onBack={() => setSelectedProject(null)} />;
-  }
-
   return (
     <section id="projects" className="py-24 px-6 bg-background">
       <div className="container mx-auto max-w-7xl">
-        <div className="text-center mb-12 space-y-4 animate-fade-in">
+        <div className="text-center mb-12 space-y-4">
           <h2 className="text-4xl md:text-5xl font-bold">
             Explore{" "}
             <span className="bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent">
@@ -196,7 +186,7 @@ const Projects = () => {
           </p>
         </div>
 
-        {/* Search and Filter */}
+        {/* Search */}
         <div className="mb-12 space-y-6">
           <div className="relative max-w-2xl mx-auto">
             <Search className="absolute left-4 top-1/2 -translate-y-1/2 h-5 w-5 text-muted-foreground" />
@@ -230,21 +220,18 @@ const Projects = () => {
           </div>
         </div>
 
-        {/* Projects Grid */}
+        {/* Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {filteredProjects.map((project, index) => (
-            <div key={project.id} style={{ animationDelay: `${index * 0.1}s` }} className="animate-fade-in">
-              <ProjectCard 
-                project={project} 
-                onViewClick={setSelectedProject}
-              />
-            </div>
+          {filteredProjects.map((project) => (
+            <ProjectCard key={project.id} project={project} />
           ))}
         </div>
 
         {filteredProjects.length === 0 && (
           <div className="text-center py-12">
-            <p className="text-lg text-muted-foreground">No projects found matching your criteria</p>
+            <p className="text-lg text-muted-foreground">
+              No projects found matching your criteria
+            </p>
           </div>
         )}
       </div>
@@ -253,3 +240,4 @@ const Projects = () => {
 };
 
 export default Projects;
+export { projects };
