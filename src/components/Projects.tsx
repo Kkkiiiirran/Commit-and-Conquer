@@ -26,11 +26,11 @@ const projects = [
   },
   {
     id: 3,
-    name: "Fitness Tracker",
-    description: "Track workouts, nutrition, and progress with beautiful data visualizations",
+    name: "MLDL.Study",
+    description: "MLDL.Study is a free and interactive learning platform designed to simplify Machine Learning (ML) and Deep Learning (DL) education for students and enthusiasts. Currently focused on Indian audiences, the platform features curated roadmaps, videos, articles, and other learning materials.",
     tags: ["App Dev", "React Native", "Firebase"],
-    github: "https://github.com",
-    demo: null,
+    github: "https://github.com/anshaneja5/mldl.study",
+    demo: "https://www.mldl.study/",
     image: "💪"
   },
   {
@@ -44,19 +44,20 @@ const projects = [
   },
   {
     id: 5,
-    name: "Smart Home Dashboard",
-    description: "Control and monitor IoT devices with a modern, responsive interface",
+    name: "Markit Chrome Extension",
+    description: "Markit is a simple yet powerful Chrome extension that lets you highlight and save text directly from any webpage.
+Whether you’re reading an article, doing research, or collecting quotes — Markit keeps your important lines just one click away.",
     tags: ["IoT", "Python", "React"],
-    github: "https://github.com",
-    demo: "https://example.com",
+    github: "https://github.com/Deepak-Kambala/MarkIt-extension",
+    demo: null,
     image: "🏠"
   },
   {
     id: 6,
-    name: "Portfolio Generator",
-    description: "Generate stunning portfolio websites from your GitHub profile automatically",
+    name: "NeoNest",
+    description: "NeoNest is a smart parenting website designed for parents of newborns (0-12 months), specially for first-time parents. The project envisions to help parents navigate their child's journey in these crucial months while taking care of their own by making things simple and smooth. The website provides various features including trackers, inventory suggestions, tasks automation, curated resources for parents and a notification system to keep them alert and informed.",
     tags: ["Web Dev", "Next.js", "Tailwind"],
-    github: "https://github.com",
+    github: "https://github.com/AditiGupta-tech/neonest",
     demo: "https://example.com",
     image: "🎨"
   },
