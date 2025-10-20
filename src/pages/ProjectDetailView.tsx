@@ -72,11 +72,20 @@ const ProjectDetailView: React.FC = () => {
               animate={{ scale: 1, opacity: 1 }}
               transition={{ duration: 0.5 }}
               whileHover={{ scale: 1.03, rotate: 0.5 }}
-              className="w-full sm:w-[80%] max-h-[320px] object-cover rounded-2xl shadow-lg border border-gray-200"
+              className="
+              w-full 
+              sm:w-[80%] 
+              max-h-[320px] 
+              object-cover 
+              rounded-2xl 
+              shadow-lg 
+              border 
+              border-gray-200
+              "
             />
   
 
-            <div className="flex-1 space-y-4 text-center sm:text-left">
+            <div className="space-y-4">
               <motion.h1
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
@@ -85,7 +94,7 @@ const ProjectDetailView: React.FC = () => {
               >
                 {project.name}
               </motion.h1>
-              <div className="flex flex-wrap justify-center sm:justify-start gap-2">
+              <div className="flex flex-wrap justify-center gap-2">
                 {project.tags.map((tag) => (
                   <Badge
                     key={tag}
