@@ -109,8 +109,8 @@ const ProjectDetailView: React.FC = () => {
             transition={{ type: "spring", stiffness: 180 }}
           >
             <Card className="p-8 shadow-lg transition-all duration-300">
-              <h2 className="text-2xl font-bold mb-4">About</h2>
-              <ul className="list-disc list-inside space-y-3 text-lg text-justify">
+              <h2 className="text-2xl font-bold  mb-4">About</h2>
+              <ul className="list-disc list-inside space-y-3 text-med text-start">
                 {project.description.map((point, index) => (
                   <li
                     key={index}
