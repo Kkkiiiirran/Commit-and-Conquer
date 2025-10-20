@@ -65,15 +65,16 @@ const ProjectDetailView: React.FC = () => {
         >
           {/* Header Section */}
           <div className="flex flex-col sm:flex-row items-center sm:items-start gap-6">
-            <motion.div
+            <motion.img
+              src={project.image}
+              alt={project.name}
               initial={{ scale: 0.9, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               transition={{ duration: 0.5 }}
-              whileHover={{ scale: 1.08, rotate: 3 }}
-              className="text-8xl sm:text-9xl drop-shadow-md select-none"
-            >
-              {project.image}
-            </motion.div>
+              whileHover={{ scale: 1.03, rotate: 0.5 }}
+              className="w-full sm:w-[80%] max-h-[320px] object-cover rounded-2xl shadow-lg border border-gray-200"
+            />
+  
 
             <div className="flex-1 space-y-4 text-center sm:text-left">
               <motion.h1
