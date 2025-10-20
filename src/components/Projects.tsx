@@ -19,7 +19,7 @@ const projects = [
       "Supports data-driven decision making for preventive care."
     ],
     tags: ["Machine Learning", "Python", "Data Analysis"],
-    image: "🧠",
+    image: "/image1.jpg",
     github: "https://github.com/simrann0104/Addiction-Risk-Prediction-Using-Python/tree/main",
   },
   {
@@ -33,7 +33,7 @@ const projects = [
       "Ideal for personal and professional use across diverse communities."
     ],
     tags: ["Web Dev", "Node.js", "Socket.io", "Express"],
-    image: "💬",
+    image: "/image2.jpg",
     github: "https://github.com/ayayayayayayayaay/chat-app-project",
   },
   {
@@ -47,7 +47,7 @@ const projects = [
       "Supports both beginners and advanced learners in understanding ML/DL concepts."
     ],
     tags: ["Web Dev", "React", "Machine Learning", "Education"],
-    image: "📚",
+    image: "/image3.jpg",
     github: "https://github.com/anshaneja5/mldl.study",
   },
   {
@@ -61,7 +61,7 @@ const projects = [
       "Clean and visually appealing interface for a professional user experience."
     ],
     tags: ["Frontend", "HTML", "CSS", "JavaScript"],
-    image: "🌐",
+    image: "/image4.jpg",
     github: "https://github.com/ayayayayayayayaay/Front-end-website",
   },
   {
@@ -75,7 +75,7 @@ const projects = [
       "Combines practicality with emotional support for new parents."
     ],
     tags: ["Web Dev", "Next.js", "React", "Tailwind"],
-    image: "👶",
+    image: "/image5.jpg",
     github: "https://github.com/AditiGupta-tech/neonest",
   },
   {
@@ -89,7 +89,7 @@ const projects = [
       "Helps turn passive reading into a personalized knowledge management workflow."
     ],
     tags: ["Browser Extension", "JavaScript", "Chrome APIs", "HTML/CSS"],
-    image: "🖍️",
+    image: "/image6.jpg",
     github: "https://github.com/Deepak-Kambala/MarkIt-extension",
   },
   {
@@ -103,7 +103,7 @@ const projects = [
       "Streamlines creation of professional-grade content efficiently."
     ],
     tags: ["AI", "Web Dev", "React", "Figma"],
-    image: "🪄",
+    image: "/image7.jpg",
     github: "https://www.github.com/Muneerali199/DocMagic",
   },
   {
@@ -117,7 +117,7 @@ const projects = [
       "Combines precision agriculture with eco-friendly approaches."
     ],
     tags: ["Machine Learning", "Image Processing", "Agritech", "Python"],
-    image: "🌾",
+    image: "/image8.jpg",
     github: "https://github.com/Bhuvaneshwari244/pest-detection.git",
   }
 ];
@@ -131,7 +131,16 @@ const ProjectCard = ({ project }) => {
   return (
     <Card className="group overflow-hidden bg-card/50 backdrop-blur-sm border-border/50 hover:border-primary/50 hover:shadow-2xl hover:shadow-primary/20 transition-all duration-500 hover:-translate-y-2 h-full flex flex-col">
       <div className="relative overflow-hidden bg-gradient-to-br from-primary/20 to-secondary/20 h-48 flex items-center justify-center text-8xl">
-        {project.image}
+          {project.image.startsWith("/") ? (
+        <img
+          src={project.image}
+          alt={project.name}
+          className="object-cover w-full h-full transition-transform duration-500 group-hover:scale-110"
+        />
+          ) : (
+            <span className="text-8xl">{project.image}</span>
+          )}
+
         <div className="absolute inset-0 bg-gradient-to-t from-card to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
       </div>
 
