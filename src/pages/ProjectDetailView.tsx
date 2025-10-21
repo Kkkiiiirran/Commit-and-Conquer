@@ -64,7 +64,8 @@ const ProjectDetailView: React.FC = () => {
           className="space-y-8"
         >
           {/* Header Section */}
-          <div className="flex flex-col sm:flex-row items-center sm:items-start gap-6">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
+
             <motion.img
               src={project.image}
               alt={project.name}
@@ -75,7 +76,7 @@ const ProjectDetailView: React.FC = () => {
               className="
               w-full 
               sm:w-[80%] 
-              max-h-[320px] 
+              max-h-[250px] 
               object-cover 
               rounded-2xl 
               shadow-lg 
@@ -85,27 +86,28 @@ const ProjectDetailView: React.FC = () => {
             />
   
 
-            <div className="space-y-4">
-              <motion.h1
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ delay: 0.3 }}
-                className="text-4xl sm:text-5xl font-extrabold tracking-tight text-white"
-              >
-                {project.name}
-              </motion.h1>
-              <div className="flex flex-wrap justify-center gap-2">
-                {project.tags.map((tag) => (
-                  <Badge
-                    key={tag}
-                    variant="default"
-                    className="rounded-full text-sm hover:scale-110 hover:bg-primary/90 transition-all"
-                  >
-                    {tag}
-                  </Badge>
-                ))}
-              </div>
-            </div>
+            <div className="space-y-4 text-center w-full">
+  <motion.h1
+    initial={{ opacity: 0 }}
+    animate={{ opacity: 1 }}
+    transition={{ delay: 0.3 }}
+    className="text-3xl sm:text-4xl font-extrabold tracking-tight text-white"
+  >
+    {project.name}
+  </motion.h1>
+  <div className="flex flex-wrap justify-center gap-2 align-middle">
+    {project.tags.map((tag) => (
+      <Badge
+        key={tag}
+        variant="default"
+        className="rounded-full text-sm hover:scale-110 hover:bg-primary/90 transition-all"
+      >
+        {tag}
+      </Badge>
+    ))}
+  </div>
+</div>
+
           </div>
 
           {/* About Section */}

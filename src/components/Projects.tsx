@@ -1,10 +1,9 @@
-
 import { useState } from "react";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Badge } from "@/components/ui/badge";
-import { Search } from "lucide-react";
+import { Search, Github } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 
 const projects = [
@@ -16,11 +15,12 @@ const projects = [
       "Analyzes features such as substance usage patterns, age of first exposure, stress indicators, and coping mechanisms.",
       "Classifies users into 'At Risk' or 'Low Risk' categories for early intervention.",
       "Empowers healthcare and mental wellness professionals to design personalized, proactive interventions.",
-      "Supports data-driven decision making for preventive care."
+      "Supports data-driven decision making for preventive care.",
     ],
     tags: ["Machine Learning", "Python", "Data Analysis"],
     image: "/image1.jpg",
-    github: "https://github.com/simrann0104/Addiction-Risk-Prediction-Using-Python/tree/main",
+    github:
+      "https://github.com/simrann0104/Addiction-Risk-Prediction-Using-Python/tree/main",
   },
   {
     id: 2,
@@ -30,7 +30,7 @@ const projects = [
       "Supports instant messaging with live translation across different languages.",
       "Features custom chat rooms, user authentication, and message delivery status.",
       "Built using Node.js, Express, and Socket.io for live updates.",
-      "Ideal for personal and professional use across diverse communities."
+      "Ideal for personal and professional use across diverse communities.",
     ],
     tags: ["Web Dev", "Node.js", "Socket.io", "Express"],
     image: "/image2.jpg",
@@ -44,7 +44,7 @@ const projects = [
       "Provides structured roadmaps, curated tutorials, research papers, and conceptual explainers.",
       "Tailored for students and enthusiasts in India, bridging the gap between theory and practice.",
       "Helps learners navigate AI effectively with hands-on projects.",
-      "Supports both beginners and advanced learners in understanding ML/DL concepts."
+      "Supports both beginners and advanced learners in understanding ML/DL concepts.",
     ],
     tags: ["Web Dev", "React", "Machine Learning", "Education"],
     image: "/image3.jpg",
@@ -58,7 +58,7 @@ const projects = [
       "Built using semantic HTML, modular CSS, and interactive JavaScript components.",
       "Demonstrates best practices in layout design, responsiveness, and performance.",
       "Adaptable for portfolio, business, or product websites.",
-      "Clean and visually appealing interface for a professional user experience."
+      "Clean and visually appealing interface for a professional user experience.",
     ],
     tags: ["Frontend", "HTML", "CSS", "JavaScript"],
     image: "/image4.jpg",
@@ -72,7 +72,7 @@ const projects = [
       "Features growth trackers, feeding and sleep schedulers, and AI-powered suggestions.",
       "Curates relevant parenting content to guide early developmental milestones.",
       "Built with Next.js, React, and Tailwind for a responsive, intuitive interface.",
-      "Combines practicality with emotional support for new parents."
+      "Combines practicality with emotional support for new parents.",
     ],
     tags: ["Web Dev", "Next.js", "React", "Tailwind"],
     image: "/image5.jpg",
@@ -86,7 +86,7 @@ const projects = [
       "Transforms browsing into an interactive research experience.",
       "Users can revisit, categorize, and search saved highlights efficiently.",
       "Designed for students, researchers, and professionals.",
-      "Helps turn passive reading into a personalized knowledge management workflow."
+      "Helps turn passive reading into a personalized knowledge management workflow.",
     ],
     tags: ["Browser Extension", "JavaScript", "Chrome APIs", "HTML/CSS"],
     image: "/image6.jpg",
@@ -100,7 +100,7 @@ const projects = [
       "Uses NLP and generative AI models to automate content creation workflows.",
       "Reduces manual effort in design and documentation tasks.",
       "Accessible for non-technical users, enhancing productivity.",
-      "Streamlines creation of professional-grade content efficiently."
+      "Streamlines creation of professional-grade content efficiently.",
     ],
     tags: ["AI", "Web Dev", "React", "Figma"],
     image: "/image7.jpg",
@@ -114,55 +114,80 @@ const projects = [
       "Uses image processing and machine learning for early infestation detection.",
       "Reduces pesticide use by identifying issues proactively.",
       "Improves crop yield and supports sustainable farming practices.",
-      "Combines precision agriculture with eco-friendly approaches."
+      "Combines precision agriculture with eco-friendly approaches.",
     ],
     tags: ["Machine Learning", "Image Processing", "Agritech", "Python"],
     image: "/image8.jpg",
     github: "https://github.com/Bhuvaneshwari244/pest-detection.git",
-  }
+  },
+  {
+    id: 9,
+    name: "Safar",
+    description: [
+      "A ride-hailing mobile application inspired by Uber, designed to connect passengers with nearby drivers in real-time.",
+      "Includes user authentication, live location tracking, ride booking, and fare estimation.",
+      "Provides a clean and intuitive interface for both riders and drivers.",
+      "Built to deliver a seamless and reliable transportation experience.",
+      "Features scalable architecture, ready for future additions like payment integration and ride history.",
+    ],
+    tags: ["Mobile App", "React Native", "Real-time Tracking", "Firebase"],
+    image: "/image9.png",
+    github: "https://github.com/Kajal09kumari/UBER---clone",
+  },
 ];
 
-
-const allTags = Array.from(new Set(projects.flatMap(p => p.tags)));
+const allTags = Array.from(new Set(projects.flatMap((p) => p.tags)));
 
 const ProjectCard = ({ project }) => {
   const navigate = useNavigate();
 
   return (
     <Card className="group overflow-hidden bg-card/50 backdrop-blur-sm border-border/50 hover:border-primary/50 hover:shadow-2xl hover:shadow-primary/20 transition-all duration-500 hover:-translate-y-2 h-full flex flex-col">
+      {/* Project Image */}
       <div className="relative overflow-hidden bg-gradient-to-br from-primary/20 to-secondary/20 h-48 flex items-center justify-center text-8xl">
-          {project.image.startsWith("/") ? (
-        <img
-          src={project.image}
-          alt={project.name}
-          className="object-cover w-full h-full transition-transform duration-500 group-hover:scale-110"
-        />
-          ) : (
-            <span className="text-8xl">{project.image}</span>
-          )}
-
+        {project.image.startsWith("/") ? (
+          <img
+            src={project.image}
+            alt={project.name}
+            className="object-cover w-full h-full transition-transform duration-500 group-hover:scale-110"
+          />
+        ) : (
+          <span className="text-4xl">{project.image}</span>
+        )}
         <div className="absolute inset-0 bg-gradient-to-t from-card to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
       </div>
 
+      {/* Project Content */}
       <div className="p-6 space-y-4 flex-1 flex flex-col">
         <h3 className="text-xl font-bold group-hover:text-primary transition-colors">
           {project.name}
         </h3>
 
         <div className="flex flex-wrap gap-2">
-          {project.tags.map(tag => (
+          {project.tags.map((tag) => (
             <Badge key={tag} variant="secondary" className="rounded-full text-xs">
               {tag}
             </Badge>
           ))}
         </div>
 
-        <Button
-          className="w-full rounded-xl mt-auto"
-          onClick={() => navigate(`/project/${project.id}`)}
-        >
-          View Project
-        </Button>
+        {/* Buttons */}
+        <div className="flex gap-3 mt-auto">
+          <Button
+            className="flex-1 rounded-xl hover:scale-105 transition-transform"
+            onClick={() => navigate(`/project/${project.id}`)}
+          >
+            View Project
+          </Button>
+          <Button
+            className="flex-1 rounded-xl hover:scale-105 transition-transform"
+            variant="outline"
+            onClick={() => window.open(project.github, "_blank")}
+          >
+            <Github className="w-4 h-4 mr-2" />
+            GitHub
+          </Button>
+        </div>
       </div>
     </Card>
   );
@@ -172,17 +197,19 @@ const Projects = () => {
   const [selectedTag, setSelectedTag] = useState(null);
   const [searchQuery, setSearchQuery] = useState("");
 
-  const filteredProjects = projects.filter(project => {
+  const filteredProjects = projects.filter((project) => {
     const matchesTag = !selectedTag || project.tags.includes(selectedTag);
-    const matchesSearch = !searchQuery ||
+    const matchesSearch =
+      !searchQuery ||
       project.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      project.description.toLowerCase().includes(searchQuery.toLowerCase());
+      project.description.join(" ").toLowerCase().includes(searchQuery.toLowerCase());
     return matchesTag && matchesSearch;
   });
 
   return (
     <section id="projects" className="py-24 px-6 bg-background">
       <div className="container mx-auto max-w-7xl">
+        {/* Header */}
         <div className="text-center mb-12 space-y-4">
           <h2 className="text-4xl md:text-5xl font-bold">
             Explore{" "}
@@ -195,7 +222,7 @@ const Projects = () => {
           </p>
         </div>
 
-        {/* Search */}
+        {/* Search + Filters */}
         <div className="mb-12 space-y-6">
           <div className="relative max-w-2xl mx-auto">
             <Search className="absolute left-4 top-1/2 -translate-y-1/2 h-5 w-5 text-muted-foreground" />
@@ -216,7 +243,7 @@ const Projects = () => {
             >
               All Projects
             </Button>
-            {allTags.map(tag => (
+            {allTags.map((tag) => (
               <Button
                 key={tag}
                 variant={selectedTag === tag ? "default" : "outline"}
@@ -229,13 +256,14 @@ const Projects = () => {
           </div>
         </div>
 
-        {/* Grid */}
+        {/* Projects Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {filteredProjects.map((project) => (
             <ProjectCard key={project.id} project={project} />
           ))}
         </div>
 
+        {/* No Results */}
         {filteredProjects.length === 0 && (
           <div className="text-center py-12">
             <p className="text-lg text-muted-foreground">
