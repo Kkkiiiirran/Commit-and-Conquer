@@ -134,6 +134,34 @@ const projects = [
     image: "/image9.png",
     github: "https://github.com/Kajal09kumari/UBER---clone",
   },
+  {
+    id: 10,
+    name: "Habit Tracker",
+    description: [
+      "A modern, open-source habit tracking web app designed for simplicity and speed.",
+      "Built with React, TypeScript, Vite, and Tailwind CSS for a clean and responsive UI.",
+      "Allows users to track daily habits, visualize progress, and build consistent routines.",
+      "Includes optional backend integration via Supabase for data persistence and authentication.",
+      "Lightweight, fast, and ideal for personal productivity and routine management.",
+    ],
+    tags: ["Web Dev", "React", "TypeScript", "Vite", "Tailwind CSS", "Supabase"],
+    image: "/image10.jpg",
+    github: "https://github.com/Charushi06/Habit-Tracker",  
+  },
+  {
+    id: 11,
+    name: "Whatsapp Chat Analyzer",
+    description: [
+      "A powerful Streamlit web app for analyzing WhatsApp group chat data.",
+      "Generates insightful visualizations and detailed chat statistics for deeper insights.",
+      "Utilizes machine learning models to predict whether a user is highly active (1) or not (0).",
+      "Built with Streamlit and Python for interactive data exploration and user-friendly visualization.",
+      "Ideal for understanding group dynamics, engagement levels, and communication patterns.",
+    ],
+    tags: ["Data Science", "Machine Learning", "Streamlit", "Python", "Data Visualization"],
+    image: "/image11.jpg",
+    github: "https://github.com/eliterks/whatsapp-chat-analyzer",  
+  }
 ];
 
 const allTags = Array.from(new Set(projects.flatMap((p) => p.tags)));
