@@ -130,7 +130,7 @@ const projects = [
       "Built to deliver a seamless and reliable transportation experience.",
       "Features scalable architecture, ready for future additions like payment integration and ride history.",
     ],
-    tags: ["Mobile App", "React Native", "Real-time Tracking", "Firebase"],
+    tags: ["React+Vite", "Real-time Tracking", "Tailwind CSS", "React-Router", "OpenStreetMap"],
     image: "/image9.png",
     github: "https://github.com/Kajal09kumari/UBER---clone",
   },
