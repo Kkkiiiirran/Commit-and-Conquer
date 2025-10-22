@@ -15,7 +15,7 @@ const Index = () => {
   const [timeLeft, setTimeLeft] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 });
 
   useEffect(() => {
-    const targetDate = new Date("2025-10-23T00:00:00").getTime(); // your registration deadline
+    const targetDate = new Date("2025-10-23T19:00:00+05:30").getTime(); // your registration deadline
     const timer = setInterval(() => {
       const now = new Date().getTime();
       const diff = targetDate - now;
