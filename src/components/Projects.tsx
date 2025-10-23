@@ -209,6 +209,25 @@ const projects = [
     tags: ["Full Stack", "Node.js", "Express.js", "MongoDB", "EJS", "Cloudinary", "Passport.js", "Mapbox"],
     image: "/image14.jpg",
     github: "https://github.com/KajalPoria/WanderLust.git",  
+  },
+  {
+    id: 15,
+    name: "Umbrella Reminder using Weather API",
+
+    description: [
+  "A Python-based automation project that reminds users to carry an umbrella based on real-time weather data.",
+  "Fetches current weather conditions using the OpenWeatherMap API for a user-specified city.",
+  "Sends automated email notifications when rain is forecasted or currently occurring.",
+  "Implements scheduling with the 'schedule' library and email functionality with 'smtplib'.",
+  "Uses 'requests' and 'json' for API interaction and data handling.",
+  "Designed to help users stay prepared for rainy weather through timely reminders.",
+  "Can be extended with calendar integration, SMS alerts, or smart home notifications.",
+  "Developed as a practical Python project showcasing API usage, automation, and user notification systems."
+],
+  
+    tags: ["Python", "OpenWeatherMap API","Schedule", "SMTP","Requests", "JSON", "Weather Forecasting", "APIs"],
+    image: "/image15.jpg",
+    github: "https://github.com/Deepika2732/Scraping-weather-data-using-python-to-get-umbrella-remainder-on-email.git",  
   }
 ];
 
