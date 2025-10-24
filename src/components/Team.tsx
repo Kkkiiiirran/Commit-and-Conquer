@@ -42,7 +42,7 @@ const team = [
     name: "Aditi Goel",
     role: "General Secretary",
    
-    image: "https://media.licdn.com/dms/image/v2/D4D03AQHeLwPc2wF9RA/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1684130489242?e=1762992000&v=beta&t=6p8Ty-FHNc3bipZZPd2NIL7s41VtYj0BJCFjC9KAV7E",
+    image: "https://v0-code-benders.vercel.app/aditi-general-secretary.png",
     linkedin: "https://www.linkedin.com/in/aditi-goel-4421b6219/",
   },
 ];

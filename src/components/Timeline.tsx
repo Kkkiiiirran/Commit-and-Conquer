@@ -33,7 +33,7 @@ const timelineEvents = [
     description: "Students can start contribution",
     status: "current",
     // link: "https://unstop.com/hackathons/commit-and-conquer-igdtuw-delhi-1571144?lb=ATJ34nu&utm_medium=Share&utm_source=anshiaro5901&utm_campaign=Online_coding_challenge",
-    link:"https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/discord-white-icon.png",
+    link:"https://discord.com/invite/7XSCPe3P",
   },
   {
     icon: Hourglass,
