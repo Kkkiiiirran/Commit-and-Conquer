@@ -53,16 +53,16 @@ const Footer = () => {
           <div>
             <h4 className="font-semibold mb-4">Community</h4>
             <ul className="space-y-2">
-              {/* <li>
+              <li>
                 <a
-                  href="https://discord.com"
+                  href="https://discord.gg/7XSCPe3P"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-sm text-muted-foreground hover:text-primary transition-colors"
                 >
                   Discord
                 </a>
-              </li> */}
+              </li>
               <li>
                 <a
                   href="https://v0-code-benders.vercel.app/"
@@ -123,14 +123,15 @@ const Footer = () => {
               >
                 <Twitter className="h-4 w-4" />
               </Button> */}
-              {/* <Button
+              <Button
                 size="icon"
                 variant="outline"
                 className="rounded-full hover:bg-primary hover:text-white transition-colors"
-                onClick={() => window.open("https://discord.com", "_blank")}
+                onClick={() => window.open("https://discord.gg/7XSCPe3P", "_blank")}
               >
-                <MessageSquare className="h-4 w-4" />
-              </Button> */}
+                <img src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/discord-white-icon.png" className="h-4 w-4" alt="" />
+          
+              </Button>
             </div>
           </div>
         </div>

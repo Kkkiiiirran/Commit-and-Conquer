@@ -1,3 +1,5 @@
+import { Button } from "./ui/button";
+
 import {
   Calendar,
   CheckCircle2,
@@ -15,22 +17,23 @@ const timelineEvents = [
     date: "October 9, 2025",
     description:
       "Registration portal opens for contributors and project admins",
-    status: "current",
-    link: "https://unstop.com/hackathons/commit-and-conquer-igdtuw-delhi-1571144?lb=ATJ34nu&utm_medium=Share&utm_source=anshiaro5901&utm_campaign=Online_coding_challenge",
+    status: "completed",
   },
   {
     icon: CalendarX,
     title: "Registration Deadline",
     date: "October 23, 2025",
     description: "Deadline for registration",
-    status: "upcoming",
+    status: "completed",
   },
   {
     icon: Rocket,
     title: "Contribution Period Starts",
     date: "October 20, 2025",
     description: "Students can start contribution",
-    status: "upcoming",
+    status: "current",
+    // link: "https://unstop.com/hackathons/commit-and-conquer-igdtuw-delhi-1571144?lb=ATJ34nu&utm_medium=Share&utm_source=anshiaro5901&utm_campaign=Online_coding_challenge",
+    link:"https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/discord-white-icon.png",
   },
   {
     icon: Hourglass,
@@ -126,14 +129,29 @@ const Timeline = ({ timeLeft }) => {
                     </p>
 
                     {event.link && (
+                      <div className="flex justify-between">
                       <a
                         href={event.link}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-block px-5 py-2 bg-gradient-to-r from-primary to-secondary text-white font-semibold rounded-full shadow-md hover:shadow-lg hover:scale-105 transition-transform duration-300"
+                        className="flex justify-center items-center gap-2 px-5 py-2 bg-gradient-to-r from-primary to-secondary text-white font-semibold rounded-full shadow-md hover:shadow-lg hover:scale-105 transition-transform duration-300"
                       >
-                        Register Here →
+                        Join Now
+                        <img src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/discord-white-icon.png" className="h-5 w-5 " alt="" />
                       </a>
+                       {/* <Button
+                size="icon"
+                
+                className="w-32 hover:bg-primary hover:text-white transition-colors  hover:bg-purple-400"
+                onClick={() => window.open("https://discord.gg/7XSCPe3P", "_blank")}
+              >
+                Join Now!
+                <img src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/discord-white-icon.png" className="h-4 w-4 " alt="" />
+          
+              </Button> */}
+              </div>
+                      
+                      
                     )}
                   </div>
                 </div>
