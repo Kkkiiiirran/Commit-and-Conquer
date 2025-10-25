@@ -118,7 +118,7 @@ const projects = [
     ],
     tags: ["Machine Learning", "Image Processing", "Agritech", "Python"],
     image: "/image8.jpg",
-    github: "https://github.com/Bhuvaneshwari244/pest-detection.git",
+    github: "https://github.com/Bhuvaneshwari244/pest-id-wiz.git",
   },
   {
     id: 9,
