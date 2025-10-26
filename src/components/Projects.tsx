@@ -23,20 +23,6 @@ const projects = [
       "https://github.com/simrann0104/Addiction-Risk-Prediction-Using-Python/tree/main",
   },
   {
-    id: 2,
-    name: "Chat App Project",
-    description: [
-      "Real-time multilingual chat platform for seamless global communication.",
-      "Supports instant messaging with live translation across different languages.",
-      "Features custom chat rooms, user authentication, and message delivery status.",
-      "Built using Node.js, Express, and Socket.io for live updates.",
-      "Ideal for personal and professional use across diverse communities.",
-    ],
-    tags: ["Web Dev", "Node.js", "Socket.io", "Express"],
-    image: "/image2.jpg",
-    github: "https://github.com/ayayayayayayayaay/chat-app-project",
-  },
-  {
     id: 3,
     name: "MLDL.Study",
     description: [
@@ -49,20 +35,6 @@ const projects = [
     tags: ["Web Dev", "React", "Machine Learning", "Education"],
     image: "/image3.jpg",
     github: "https://github.com/anshaneja5/mldl.study",
-  },
-  {
-    id: 4,
-    name: "Front-End Website",
-    description: [
-      "Modern and responsive front-end website focused on usability and accessibility.",
-      "Built using semantic HTML, modular CSS, and interactive JavaScript components.",
-      "Demonstrates best practices in layout design, responsiveness, and performance.",
-      "Adaptable for portfolio, business, or product websites.",
-      "Clean and visually appealing interface for a professional user experience.",
-    ],
-    tags: ["Frontend", "HTML", "CSS", "JavaScript"],
-    image: "/image4.jpg",
-    github: "https://github.com/ayayayayayayayaay/Front-end-website",
   },
   {
     id: 5,
