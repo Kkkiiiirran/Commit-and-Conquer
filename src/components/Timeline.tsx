@@ -164,7 +164,7 @@ const Timeline = ({ timeLeft }) => {
         </div>
 
         {/* ===== Countdown Timer Below Timeline ===== */}
-        <div className="mt-16 flex flex-col items-center justify-center p-8 bg-black text-white rounded-2xl shadow-lg border border-gray-800">
+        {/* <div className="mt-16 flex flex-col items-center justify-center p-8 bg-black text-white rounded-2xl shadow-lg border border-gray-800">
           {timeLeft.expired ? (
             <h2 className="text-2xl font-bold text-red-500">
               Registration Closed
@@ -189,7 +189,7 @@ const Timeline = ({ timeLeft }) => {
               </div>
             </>
           )}
-        </div>
+        </div> */}
       </div>
     </section>
   );
